@@ -21,3 +21,5 @@ alias bb 'rlwrap bb'
 
 source $HOME/.config/fish/functions/sdk.fish
 
+# You must call it on initialization or listening to directory switching won't work
+load_nvm > /dev/stderr
