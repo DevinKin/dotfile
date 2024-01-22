@@ -52,7 +52,11 @@ This function should only modify configuration layer settings."
      (json :variables
            json-fmt-tool 'web-beautify
            json-fmt-on-save t
-           json-backend nil)
+           json-backend 'lsp)
+     (javascript
+      :variables
+      js-mode-show-strict-warnings nil
+      javascript-fmt-tool 'web-beautify)
 
      (parinfer
       :variables
@@ -67,7 +71,8 @@ This function should only modify configuration layer settings."
           osx-right-control-as 'left
           osx-swap-option-and-command nil)
      docker
-     lsp
+     (lsp
+      :variables lsp-headerline-breadcrumb-enable nil)
      ;; markdown
      multiple-cursors
      org
@@ -445,7 +450,7 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
 
    ;; Code folding method. Possible values are `evil', `origami' and `vimish'.
    ;; (default 'evil)
