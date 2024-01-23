@@ -58,6 +58,10 @@ This function should only modify configuration layer settings."
       js-mode-show-strict-warnings nil
       javascript-fmt-tool 'web-beautify)
 
+     (sql :variables
+          sql-backend 'lsp
+          sql-lsp-sqls-workspace-config-path 'workspace
+          sql-capitalize-keywords t)
      (parinfer
       :variables
       parinfer-rust-auto-download t)

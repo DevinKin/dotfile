@@ -9,10 +9,16 @@ end
 
 set -x EDITOR nvim
 set -x  nvim
-set -x GOPROXY https://mirrors.aliyun.com/goproxy/
+#set -x GOPROXY https://mirrors.aliyun.com/goproxy/
+set -x GOPATH $HOME/go
 set -x SPACEMACSDIR $HOME/.spacemacs.d
 set -gx PATH $PATH /opt/homebrew/bin
+set -gx PATH $PATH /opt/homebrew/opt/llvm/bin
+set -gx PATH $PATH /opt/homebrew/opt/ruby/bin
+set -gx PATH $PATH $GOPATH/bin
 
+set -gx LDFLAGS "-L/opt/homebrew/opt/ruby@3.0/lib"
+set -gx CPPFLAGS "-I/opt/homebrew/opt/ruby@3.0/include"
 
 
 alias vim 'nvim'
@@ -23,3 +29,4 @@ source $HOME/.config/fish/functions/sdk.fish
 
 # You must call it on initialization or listening to directory switching won't work
 load_nvm > /dev/stderr
+rvm default
