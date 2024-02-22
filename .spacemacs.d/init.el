@@ -48,7 +48,8 @@ This function should only modify configuration layer settings."
      dap
      (clojure :variables
               clojure-enable-linters 'clj-kondo
-              clojure-backend 'cider)
+              clojure-backend 'cider
+              clojure-enable-fancify-symbols t)
      ;; web for html css and json
      web-beautify
      (html :variables web-fmt-tool 'web-beautify)
@@ -596,7 +597,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first.")
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump.")
-  
 
 
 (defun dotspacemacs/user-config ()
@@ -604,8 +604,7 @@ dump.")
 This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
-before packages are loaded."
-  (setq clojure-enable-fancify-symbols t))
+before packages are loaded.")
 
 
 

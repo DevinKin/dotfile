@@ -47,4 +47,8 @@ set --universal nvm_default_version lts
 set -g __sdkman_custom_dir ~/.sdkman/
 
 # flutter
-set -gx PATH $PATH "$HOME/flutter-dev/flutter/bin"
+set -gx PATH $PATH "$HOME/flutter/bin"
+set -gx PUB_HOSTED_URL "https://pub.flutter-io.cn"
+set -gx FLUTTER_STORAGE_BASE_URL "https://storage.flutter-io.cn"
+
+set -gx CPATH "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"
